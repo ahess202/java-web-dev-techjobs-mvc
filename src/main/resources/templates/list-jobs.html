@@ -13,37 +13,34 @@
     <table th:each="job : ${jobs}" class="job-listing" th:fragment="job-table">
 
             <tr>
-                <th>ID</th>
-                <td th:text="${job.Id}"></td>
+                <th class="dataHead">ID</th>
+                <td class="dataContent" th:text="${job.Id}"></td>
             </tr>
             <tr>
-                <th>Name</th>
-                <td th:text="${job.name}"></td>
+                <th class="dataHead">Name</th>
+                <td class="dataContent" th:text="${job.name}"></td>
             </tr>
             <tr>
-                <th>Employer</th>
-<!--                <td th:text="${job.employer}"></td>-->
-                <td><a th:href="'http://localhost:8080/list/jobs?column=employer&value=' + ${job.employer}"
+                <th class="dataHead">Employer</th>
+                <td class="dataContent"><a
+                        th:href="'http://localhost:8080/list/jobs?column=employer&value=' + ${job.employer}"
                        th:text="${job.employer}"></a></td>
             </tr>
             <tr>
-                <th>Location</th>
-<!--                <td th:text="${job.location}"></td>-->
-                <td><a th:href="'http://localhost:8080/list/jobs?column=location&value=' + ${job.location}"
+                <th class="dataHead">Location</th>
+                <td class="dataContent"><a th:href="'http://localhost:8080/list/jobs?column=location&value=' + ${job.location}"
                        th:text="${job.location}"></a></td>
 
             </tr>
             <tr>
-                <th>Position Type</th>
-<!--                <td th:text="${job.positionType}"></td>-->
-                <td><a
+                <th class="dataHead">Position Type</th>
+                <td class="dataContent"><a
                         th:href="'http://localhost:8080/list/jobs?column=positionType&value=' + ${job.positionType}"
                         th:text="${job.positionType}"></a></td>
             </tr>
             <tr>
-                <th>Skill</th>
-<!--                <td th:text="${job.coreCompetency}"></td>-->
-                <td><a th:href="'http://localhost:8080/list/jobs?column=coreCompetency&value=' + ${job.coreCompetency}"
+                <th class="dataHead">Skill</th>
+                <td class="dataContent"><a th:href="'http://localhost:8080/list/jobs?column=coreCompetency&value=' + ${job.coreCompetency}"
                        th:text="${job.coreCompetency}"></a></td>
             </tr>
         <hr/>
